@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, JoinColumn } from "typeorm"
+import { BuyList } from "./BuyList"
 
 @Entity()
 export class User {
@@ -15,4 +16,6 @@ export class User {
     @Column()
     age: number
 
+    @OneToMany(type => BuyList, (BuyList) => BuyList.userId)
+    buyList: BuyList[]
 }
