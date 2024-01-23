@@ -6,11 +6,15 @@ export const AppDataSource = new DataSource({
     type: "mssql",
     host: "localhost",
     username: "sa",
-    password: "Admin12345",
-    database: "tempdb",
+    password: "12we34rt",
+    database: "typeorm-test",
     synchronize: true,
-    logging: false,
+    logging: true,
     entities: [User],
     migrations: [],
     subscribers: [],
+    options: {
+        encrypt: true,
+        trustServerCertificate: true
+    }
 })
