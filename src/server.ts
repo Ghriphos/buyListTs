@@ -1,6 +1,6 @@
 import * as express from 'express'
 import { Router, Request, Response} from 'express'
-import routes from "./routes"
+import routes from "./routes/routes"
 
 const http = express()
 
